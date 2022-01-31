@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    <title>
+        create a row and delete a row
+    </title>
+    <style>
+    table, td  {
+    border: 1px solid black;
+        }
+    </style>
+    </head>
+    <body>
+<table id="mytable" >
+    <tr>
+        <th>s.no</th>
+        <th>name</th>
+        <th>class</th>
+    </tr>
+    <tr>
+        <td>1</td>
+        <td>Ramu</td>
+        <td>10th</td>
+    </tr>
+    <tr>
+        <td>2</td>
+        <td>Laxman</td>
+        <td>9th</td>
+    </tr>
+    
+</table>
+<br>
+<button class="xyz" onclick="getCreaterow()"> create a row </button>
+<button class="abc" onclick="getDeleterow()"> delete a row</button>
+
+  <script>
+      function getCreaterow()
+{
+  let table=document.querySelector("table[id=mytable]");
+   var row=table.insertRow();
+   var cell1=row.insertCell(0);
+   var cell2=row.insertCell(1);
+   var cell3=row.insertCell(2);
+   cell1.innerHTML="3";
+   cell2.innerHTML="VAMSI";
+   cell3.innerHTML="9TH";
+}
+function getDeleterow()
+{
+    document.querySelector("table[id=mytable]").deleteRow(0);
+}
+  </script>
+    </body>
+</html>
